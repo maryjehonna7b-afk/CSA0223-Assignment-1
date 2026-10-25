@@ -1,0 +1,7 @@
+TASK 11 – FINAL RECOMMENDATION
+
+Use unsigned short for the specified 16-bit meter reading after checking its limits. Use integer paise for money and long long for totals across many households. Keep tariff values in named constants so revisions are made in one place. Use header files and include guards for shared declarations. Prefer normal functions for billing calculations and validate all input.
+
+Limitations: hard-coded tariffs require recompilation; one monthly unit total cannot support peak/off-peak tariffs; and a lower meter reading cannot always be assumed to be a rollover without checking.
+
+If tariff values are read from a configuration file, reading t values takes O(t) time and O(t) space. This avoids recompiling after each tariff revision but the file must be checked for missing or invalid values.

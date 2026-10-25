@@ -1,0 +1,12 @@
+TASK 10 – EXPECTED AND ACTUAL RESULTS
+
+Run Task10_Experiment.c and record the output shown by Dev-C++. Do not make up measurements. Each bill in this experiment is Rs 162.50.
+
+Exact totals:
+4,000 bills = Rs 650,000.00
+60,000 bills = Rs 9,750,000.00
+800,000 bills = Rs 130,000,000.00
+
+Integer paise gives an exact total for this example. Double has a large range but cannot represent all decimal fractions exactly. A 32-bit int cannot hold the largest total in paise. long long can hold it. The size of long differs by compiler/platform, so use sizeof and limits to report your system.
+
+Both approaches use O(1) space per total and O(1) time per addition.

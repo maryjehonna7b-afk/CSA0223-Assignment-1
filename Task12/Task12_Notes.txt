@@ -1,0 +1,12 @@
+TASK 12 – DAY-4 DESIGN CHALLENGE
+
+Decision: modify the original design.
+- A smart meter sends 4 readings per hour × 24 hours × 365 days = 35,040 readings per year.
+- Watt-hours and yearly totals can exceed the 16-bit meter range, so use a wider type such as long long.
+- A single total does not show how much electricity was used from 6 PM to 10 PM. Keep peak and off-peak usage separately.
+- Read tariff values from tariff.cfg at run time so tariff changes do not require recompiling.
+- Keep money in integer paise.
+
+The supplied beginner program reads yearly Wh and peak-hour Wh and reads rates from tariff.cfg. It converts to whole kWh for simplicity, so some Wh below a whole kWh are discarded. A production program should retain Wh and apply a clearly documented rounding rule. The example assumes a 20% surcharge is applied to the calculated energy charge. Test the program with your own input and attach the actual output.
+
+Reading t tariff values takes O(t) time and O(t) space. Processing each interval is O(1); storing all readings takes O(r) space, while maintaining totals only can use O(1) working space.

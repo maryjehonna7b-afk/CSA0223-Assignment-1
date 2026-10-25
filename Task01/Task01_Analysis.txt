@@ -1,0 +1,26 @@
+TASK 1 – UNDERSTAND THE PROBLEM
+
+Inputs:
+- Household number identifies the customer.
+- Previous reading and current reading are used to calculate units consumed.
+- Category can identify the household tariff if categories are used later.
+
+Outputs:
+- Units consumed, energy charge, fixed charge and total bill.
+
+Constants:
+The slab limits are 100 and 200 units. The rates are 0, 225 and 450 paise per unit. The fixed charge is 5000 paise. These values should be defined once so tariff changes are easy.
+
+Data types:
+Readings and units are whole numbers. Money is stored as integer paise to avoid rounding errors. The total for many households can be large, so a wide integer such as long long is suitable.
+
+Rules:
+1. The bill must not be negative.
+2. Total bill = energy charge + fixed charge.
+3. A meter rollover must not create negative consumption.
+4. Invalid readings must be rejected.
+
+Assumptions:
+The meter is a 16-bit counter from 0 to 65535. The first 100 units are free, units 101–200 cost Rs 2.25 per unit, units above 200 cost Rs 4.50 per unit, and the fixed charge is Rs 50.
+
+Alternative: If readings are stored as text such as "01530", convert them to integers before calculation. For d digits, conversion takes O(d) time and the text uses O(d) space. A fixed-size integer uses O(1) time and O(1) space for reading storage.

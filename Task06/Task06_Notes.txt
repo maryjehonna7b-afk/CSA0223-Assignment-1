@@ -1,0 +1,7 @@
+TASK 6 – READ AND PRINT DATA CORRECTLY
+
+Common format specifiers: %d for int, %u for unsigned int, %ld for long, %lld for long long, %f to print floating point, %lf for double in scanf, %c for char and %s for a string.
+
+Check scanf's return value. Entering 16250 gives Rs 162.50. Entering letters or a negative amount prints Invalid amount. Using a wrong format specifier can cause undefined behaviour.
+
+Alternative: fgets reads a line and strtol/sscanf converts it. Processing a line of length L takes O(L) time and O(L) buffer space. fgets makes it easier to discard and report invalid input.

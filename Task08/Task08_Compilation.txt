@@ -1,0 +1,18 @@
+TASK 8 – COMPILATION PROCESS
+
+Using GCC command line:
+gcc -E Task03_CompleteCode.c -o preprocessed.i
+gcc -S Task03_CompleteCode.c -o assembly.s
+gcc -c Task03_CompleteCode.c -o object.o
+gcc object.o -o billing
+gcc -Wall -Wextra Task03_CompleteCode.c -o billing
+
+Stages:
+- -E expands macros and headers.
+- -S produces assembly code.
+- -c creates an object file.
+- Linking creates the executable.
+
+A compile-time error is a syntax/type problem. A link-time error occurs if a required function definition is missing. A run-time error occurs while the program runs. Use -Wall -Wextra to find suspicious code.
+
+For a multi-file program, compile each .c file to an object file and then link the object files. After one file changes, only that file usually needs recompilation before linking again.

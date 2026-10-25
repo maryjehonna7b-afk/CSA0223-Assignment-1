@@ -1,0 +1,12 @@
+TASK 3 – DEFINE THE CONSTANTS
+
+Expected output:
+  0 units -> Rs 50.00
+100 units -> Rs 50.00
+150 units -> Rs 162.50
+200 units -> Rs 275.00
+350 units -> Rs 950.00
+
+Change RATE2_PAISE from 225 to 230 and recompile. Bills with second-slab units change consistently. For 150 units, the bill becomes Rs 165.00; for 200 units, Rs 280.00; for 350 units, Rs 960.00. Bills of 0 or 100 units remain Rs 50.00.
+
+#define is a preprocessor replacement and has no type. const variables have a type and can be inspected in a debugger. enum is useful for named integer choices. Use capital letters and underscores for constant names. A fixed number of slab checks takes O(1) time and O(1) extra space.

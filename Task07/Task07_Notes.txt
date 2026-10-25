@@ -1,0 +1,11 @@
+TASK 7 – TYPE CONVERSION AND PRECISION
+
+Typical output:
+5 / 2 = 2
+(double)5 / 2 = 2.50
+0.1 + 0.2 = 0.30000000000000004 (may vary slightly)
+(int)3.9 = 3
+
+Integer division discards the decimal part. Casting to double before division keeps the fraction. Decimal fractions such as 0.1 may not be exact in binary floating-point. Casting 3.9 to int truncates to 3; it does not round.
+
+Use integer paise for bills. A large long cast to int may lose information if the value is too large. Integer and floating operations are O(1) time and O(1) space per value. Integer paise is exact for whole-paisa amounts.

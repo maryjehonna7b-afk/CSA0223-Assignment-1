@@ -1,0 +1,9 @@
+TASK 2 – CHOOSE THE DATA TYPES
+
+Use unsigned short for the assignment's 16-bit meter register, int for ordinary units, long for a single bill in paise where sufficient, and long long for totals from many households. Use integer paise rather than float rupees because whole paise can be stored exactly.
+
+The actual sizes depend on the compiler. In Dev-C++, run the supplied program to see sizeof and USHRT_MAX. On a typical 16-bit unsigned short, the maximum is 65535.
+
+Rollover: from 65400 to 120, consumption is 65536 - 65400 + 120 = 256. Unsigned arithmetic wraps around, so the result is not negative.
+
+Alternative: double rupees uses O(1) time and space per addition, just like integer paise, but decimal values may not be represented exactly. Integer paise avoids rounding for amounts that are whole paise.

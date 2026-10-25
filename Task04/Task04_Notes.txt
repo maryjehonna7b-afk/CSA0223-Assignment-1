@@ -1,0 +1,7 @@
+TASK 4 – USE MACROS SAFELY
+
+Parentheses are needed in macros. Without them, SQUARE(a+1) could expand incorrectly. MAX(i++, j) is unsafe because a macro can evaluate an argument more than once. Do not pass expressions with side effects to MAX.
+
+Run gcc -E Task04_Macros.c -o preprocessed.i if using GCC command line. In Dev-C++, use the compiler/preprocessor options if available, or inspect the expanded code using the command line.
+
+An inline function checks argument types and evaluates each argument once. Macro expansion may duplicate code each time it is used. Both operations take O(1) time for a simple expression; macro code size can increase with the number of uses.
